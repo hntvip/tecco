@@ -99,7 +99,7 @@ $(document).ready(function() {
     });
 
     $(document).ready(function() {
-        $('.page-header .nav li.home').addClass('active');
+        //$('.page-header .nav li.home').addClass('active');
         loadscrollfullpage();
         //$(".mainslide .bxslider li span.item, #fullpage .auto-height").height($("#fullpage").height());
         if ($(window).width() > 1200) {

@@ -428,11 +428,11 @@ h2.big-title {}
 }
 
 .top-head .logo {
-    background: url('../images/logo.svg') no-repeat left center;
+    background: url('../images/logo-tecco.jpg') no-repeat left center;
     display: block;
-    width: 270px;
-    height: 95px;
-    background-size: 270px;
+    width: 250px;
+    height: 115px;
+    background-size: 250px;
 }
 
 .top-head.sticky {
@@ -447,8 +447,8 @@ h2.big-title {}
 }
 
 .top-head.sticky .logo {
-    background-size: 178px;
-    height: 60px;
+    background-size: 120px;
+    height: 63px;
 }
 
 .top-head.sticky .top-links {
@@ -1858,7 +1858,7 @@ iframe[name=google_conversion_frame] {
     height: 100%;
 }
 
-#fullpage_nav ul {
+#fullpage_nav ul , #fullpage-nav-social ul{
     list-style: none;
     padding: 0px;
 }
@@ -1955,6 +1955,63 @@ iframe[name=google_conversion_frame] {
     /** Opera **/
     -moz-transform: translate(-10px, 0);
     /** Firefox **/
+}
+
+#fullpage-nav-social {
+    position: fixed;
+    width: 55px;
+    height: 100%;
+    z-index: 52;
+    left: 0px;
+    top: 40%;
+    padding-top: 20px;
+}
+#fullpage-nav-social li {
+    width: 55px;
+    height: 55px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    background: #00ff39;
+    margin-bottom:5px;
+}
+
+#fullpage-nav-social li a {
+    display: block;
+    color: #fff;
+    white-space: nowrap;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    text-transform: uppercase;
+    padding: 12px 65px 5px 20px;
+    z-index: 53;
+    margin-bottom:10px;
+}
+
+#fullpage-nav-social li:after {
+    content: '';
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    opacity: 0.7;
+}
+
+#fullpage-nav-social li.itemfacebook:after {
+    background: url(../images/icon-fb.svg) center center no-repeat;
+    background-size: 30px 30px;
+}
+
+#fullpage-nav-social li.itemlienhe:after {
+    background: url(../images/icon-lienhe.svg) center center no-repeat;
+    background-size: 30px 30px;
+}
+
+#fullpage-nav-social li.itemgoogleplus:after {
+    background: url(../images/google-plus.svg) center center no-repeat;
+    background-size: 30px 30px;
 }
 
 .section {
@@ -4710,7 +4767,7 @@ h1.post-title {
 }
 
 .page-contact .logo {
-    background: url('../images/petro_logo.svg') no-repeat top center;
+    background: url('../images/logo-tecco.jpg') no-repeat top center;
     display: block;
     width: 100%;
     height: 125px;
@@ -6159,7 +6216,7 @@ div#panoDIV.cursorDragMode {
         width: 200px;
         height: 60px;
         top: 0;
-        background: url('../images/logo.svg') no-repeat center center;
+        background: url('../images/logo-tecco.jpg') no-repeat center center;
         background-size: 200px;
         position: absolute;
         left: calc(50% - 100px);
