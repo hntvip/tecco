@@ -4850,23 +4850,11 @@ h1.post-title {
     text-transform: uppercase;
 }
 
-.fancybox-close {
-    background: url('../images/ico-close.svg') !important;
-    width: 44px !important;
-    height: 44px !important;
-    top: -22px !important;
-    right: -22px !important;
-    border-radius: 50%;
-    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
-}
-
 
 /*.fancybox-opened .fancybox-skin{background:none !important; box-shadow: none !important; -webkit-box-shadow:none !important; border: 4px solid #0670af;}*/
 
 .fancybox-title-float-wrap {
-    right: 0%;
+    /*right: 0%;*/
     margin-bottom: 27px !important;
 }
 
@@ -6642,13 +6630,6 @@ div#panoDIV.cursorDragMode {
     }
     .list-share {
         top: -15px;
-    }
-    .fancybox-close {
-        background-size: 36px !important;
-        width: 36px !important;
-        height: 36px !important;
-        top: -18px !important;
-        right: -18px !important;
     }
     .fancybox-title-float-wrap {
         margin-bottom: 15px !important;
