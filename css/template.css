@@ -4842,7 +4842,6 @@ h1.post-title {
     transform: translate(-50%, -50%);
     text-align: center;
     margin: -10px 0px 0px;
-    padding-top: 100px;
     background: url('../images/icon-zoom.svg') no-repeat center center;
     font-size: 16px;
     color: #ffffff;
@@ -4866,11 +4865,15 @@ h1.post-title {
     padding: 12px 49px !important;
     font-size: 18px !important;
     border-radius: 29px !important;
-    background: url('/assets/uploads/myfiles/images/utilities/bg-note.png') repeat !important;
+    // background: url('/assets/uploads/myfiles/images/utilities/bg-note.png') repeat !important;
     font-weight: 600;
     text-transform: uppercase;
 }
-
+.fancybox-title{
+    color: #000;
+    background: wheat;
+    padding:20px;
+}
 .owl-carousel .owl-wrapper:after {
     content: ".";
     display: block;
@@ -5582,6 +5585,9 @@ h1.post-title {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
+.section-info{
+    padding:20px 0;
+}
 .title-mb h1:after {
     content: ' ';
     position: absolute;
@@ -6633,6 +6639,11 @@ div#panoDIV.cursorDragMode {
     }
     .fancybox-title-float-wrap {
         margin-bottom: 15px !important;
+    }
+    .fancybox-title .fancybox-title-inside-wrap {
+        margin-top: 10px;
+        background: white;
+        padding: 10px;
     }
     .fancybox-type-swf .fancybox-title-float-wrap {
         margin-bottom: -30px !important;
