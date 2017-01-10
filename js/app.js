@@ -10,7 +10,7 @@ $(document).ready(function() {
             if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
 
                 lsfullpage = $('#fullpage').fullpage({
-                    anchors: ['slidehome', 'overview', 'location', 'modelhouse', 'video', 'utilities', 'news', 'footer'],
+                    anchors: ['slidehome', 'overview', 'location', 'modelhouse', 'loiich', 'utilities', 'news', 'footer'],
                     menu: '#fullpage_nav ul',
                     verticalCentered: false,
                     scrollOverflow: false,
@@ -45,7 +45,7 @@ $(document).ready(function() {
             } else {
 
                 lsfullpage = $('#fullpage').fullpage({
-                    anchors: ['slidehome', 'overview', 'location', 'modelhouse', 'video', 'utilities', 'news', 'footer'],
+                    anchors: ['slidehome', 'overview', 'location', 'modelhouse', 'loiich', 'utilities', 'news', 'footer'],
                     menu: '#fullpage_nav ul',
                     //sectionsColor: ['#ffffff', '#ffffff', '#ffffff'],
                     verticalCentered: false,
@@ -141,17 +141,17 @@ $(document).ready(function() {
         sliderimg = $('.mainslide .bxslider').bxSlider({
             auto: true,
             mode: 'fade',
-            speed: 1500,
+            speed: 500,
             pause: 5000,
             captions: false,
             pager: false,
             controls: true,
             onSliderLoad: function(currentIndex) {
                 var src = "";
-                if (currentIndex < $(slide).length - 1) {
-                    src = $(slide[currentIndex + 1]).data("src");
-                } else {
+                if (currentIndex ==0){
                     src = $(slide[0]).data("src");
+                }else{
+                    src = $(slide[currentIndex]).data("src");
                 }
                 $(".bx-controls-direction").append("<div class='next-thumb'><img src='" + src + "' alt='' /></div>");
 

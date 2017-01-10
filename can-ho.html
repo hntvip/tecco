@@ -84,9 +84,9 @@
         <div class="vertical-align">
             <div class="inner">
                 <ul>
-                    <li class="item itemfacebook"><a href="#">Facebook</li>
-                    <li class="item itemgoogleplus"><a href="#">YouTube</li>
-                    <li class="item itemlienhe"><a href="#">Liên Hệ</li>
+                    <li class="item itemfacebook"><a href="#" target="_blank">Facebook</li>
+                    <li class="item itemgoogleplus"><a href="https://plus.google.com/u/1/109667697957252234419" target="_blank">Google Plus</li>
+                    <li class="item itemlienhe"><a href="tel:0902905009" target="_blank" title="liên hệ điện thoại">Liên Hệ</li>
                 </ul>
             </div>
         </div>
@@ -130,7 +130,7 @@
                     <div class='album-item grid-item _album_1' data-category='_album_1'>
                         <div class='border-hover'></div>
                         <img src='images/houses/canho1.png' class='' alt='Căn hộ 1' />
-                        <a href='images/houses/canho1.png' class='fancybox item-hover' data-caption='<h3>Căn hộ 1</h3> <p>Diện tích: 100m2<p> <p>Liên hệ:<a href="tel:0902905009">0902905009 Dr Dương</a></p>'>
+                        <a href='images/houses/canho1.png' class='fancybox item-hover' data-caption='<h3>Căn hộ 1</h3> <p>Diện tích: 100m2, Có nhiều cửa sổ thoán mát, đầy đủ tiện nghi Có nhiều cửa sổ thoán mát, đầy đủ tiện nghi<p> <p>Liên hệ:<a href="tel:0902905009">0902905009 Dr Dương</a></p>'>
                             <h2 class='title'>Căn hộ 1 </h2>
                         </a>
                         <div class='clearfix'></div>
@@ -138,8 +138,8 @@
                     <div class='album-item grid-item _album_1' data-category='_album_1'>
                         <div class='border-hover'></div>
                         <img src='images/houses/canho2.png' class='' alt='Căn hộ 2' />
-                        <a  href='images/houses/canho2.png' class='fancybox item-hover' data-caption='Căn hộ 2'>
-                            <h2 class='title'>Căn hộ 2 </h2>
+                        <a href='images/houses/canho2.png' class='fancybox item-hover' data-caption='<h3>Căn hộ 1</h3> <p>Diện tích: 100m2, Có nhiều cửa sổ thoán mát, đầy đủ tiện nghi Có nhiều cửa sổ thoán mát, đầy đủ tiện nghi<p> <p>Liên hệ:<a href="tel:0902905009">0902905009 Dr Dương</a></p> <p>Diện tích: 100m2, Có nhiều cửa sổ thoán mát</p>'>
+                            <h2 class='title'>Căn hộ 2</h2>
                         </a>
                         <div class='clearfix'></div>
                     </div>
@@ -282,6 +282,7 @@
             beforeShow:function(){
                 this.title = $(this.element).data("caption");
             },
+            fitToView: true,
             helpers : {
                 title: {
                     type: 'inside',
@@ -293,8 +294,7 @@
                 }
             },
             openEffect  : 'elastic',
-            closeBtn: false,
-            padding: 100 
+            closeBtn: false
          });
 
         $('#page_wrapper').append('<div id="top">Back to Top</div>');

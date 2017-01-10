@@ -2145,21 +2145,6 @@ iframe[name=google_conversion_frame] {
     padding: 0px 75px 0 25px;
 }
 
-#section1 {
-    background: url('../images/bg-section1.svg') no-repeat left top;
-    background-size: 210px;
-}
-
-#section2 {
-    background: url('../images/bg-section2.svg') no-repeat bottom right;
-    background-size: 210px;
-}
-
-#section6 {
-    background: url('../images/bg-section6.svg') no-repeat center top;
-    background-size: 460px;
-}
-
 #section1 .icon-separated {
     max-width: 110px;
     left: -55px;
