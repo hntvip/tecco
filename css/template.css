@@ -1796,7 +1796,7 @@ h2.big-title {}
 
 .vertical-align .inner {
     position: absolute;
-    top: 45%;
+    top: 43%;
     transform: translateY(-50%);
     width: 100%;
 }
@@ -1926,6 +1926,11 @@ iframe[name=google_conversion_frame] {
     background-size: 30px 30px;
 }
 
+#fullpage_nav li.item-khuyenmai:after {
+    background: url(../images/icon-share.svg) center center no-repeat;
+    background-size: 30px 30px;
+}
+
 #fullpage_nav li.item-news:after {
     background: url(../images/icon-file.svg) center center no-repeat;
     background-size: 30px 30px;
@@ -2001,7 +2006,7 @@ iframe[name=google_conversion_frame] {
     position: absolute;
     right: 0px;
     top: 0px;
-    opacity: 0.7;
+    opacity:1;
 }
 
 #fullpage-nav-social li.itemfacebook:after {
@@ -5724,6 +5729,12 @@ div#panoDIV.cursorDragMode {
     cursor: url(../lib/HaDoCentrosadata/graphics/cursors_drag_html5.cur), default;
 }
 
+.checked-icon{
+    background: url(../images/done-tick.png) no-repeat left top;
+    font-style: italic;
+    color: #5c4621;
+    padding: 0 0 10px 50px;
+}
 @media screen and (min-width:992px) {
     ul.nav li:hover > ul.dropdown-menu {
         display: block;

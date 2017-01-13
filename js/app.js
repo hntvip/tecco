@@ -10,7 +10,7 @@ $(document).ready(function() {
             if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
 
                 lsfullpage = $('#fullpage').fullpage({
-                    anchors: ['slidehome', 'overview', 'location', 'modelhouse', 'loiich', 'utilities', 'news', 'footer'],
+                    anchors: ['slidehome', 'overview', 'location', 'modelhouse', 'loiich', 'utilities', 'khuyenmai', 'news', 'footer'],
                     menu: '#fullpage_nav ul',
                     verticalCentered: false,
                     scrollOverflow: false,
@@ -45,7 +45,7 @@ $(document).ready(function() {
             } else {
 
                 lsfullpage = $('#fullpage').fullpage({
-                    anchors: ['slidehome', 'overview', 'location', 'modelhouse', 'loiich', 'utilities', 'news', 'footer'],
+                    anchors: ['slidehome', 'overview', 'location', 'modelhouse', 'loiich', 'utilities', 'khuyenmai', 'news', 'footer'],
                     menu: '#fullpage_nav ul',
                     //sectionsColor: ['#ffffff', '#ffffff', '#ffffff'],
                     verticalCentered: false,
@@ -141,11 +141,11 @@ $(document).ready(function() {
         sliderimg = $('.mainslide .bxslider').bxSlider({
             auto: true,
             mode: 'fade',
-            speed: 500,
-            pause: 5000,
+            speed: 350,
+            pause: 2500,
             captions: false,
-            pager: false,
-            controls: true,
+            // pager: false,
+            // controls: true,
             onSliderLoad: function(currentIndex) {
                 var src = "";
                 if (currentIndex ==0){
@@ -178,35 +178,29 @@ $(document).ready(function() {
             var email = $("#txtEmail").val();
             var hoidap = $("#txtHoiDap").val();
             if (Valid_NewsLetter('.txtcontactName', 'Vui lòng nhập họ & tên', 'Họ & Tên','.txtcontactMobile', 'Vui lòng nhập số điện thoại', 'Điện thoại','.txtcontactEmail', 'Vui lòng nhập email hoặc email của Quý khách không đúng định dạng', 'Email','.txtcontactHoiDap', 'Vui lòng nhập thông tin vào ô bên dưới', 'Hỏi đáp')) {
-                // bootbox.alert('Cám ơn Quý khách đã gửi thông tin. Chúng tôi sẽ liên hệ Quý khách trong thời gian sớm nhất.');
-
-                // $.ajax({
-                //     type: "GET",
-                //     cache: false,
-                //     url: "/AJAX.aspx",
-                //     data: "func=POSTPRICE&email=" + email + "&name=" + name + "&mobile=" + mobile,
-                //     dataType: "jsonp",
-                //     success: function(msg) {
-                //         $('#txtEmail').val("");
-                //         $('#txtName').val("");
-                //         $('#txtMobile').val("");
-                //         //bootbox.alert(msg, function () {
-                //         //});
-                //     },
-                //     error: function(msg) {
-                //         //$(imgCatcha).hide();
-                //     }
-                // });
-                var googleForm = $(window).jqGoogleForms({ "formKey": "1AMstqiYLZCaILVpPmY9e_4GNxAeVnYJAZKO3x97g8XY" });
-
-                googleForm.sendFormData({
+               
+                var dataToServer= {
                     "entry.1003006183": name,
                     "entry.435372916": mobile,
                     "entry.1989955453": email,
                     "entry.543510334": hoidap
-                });
+                } 
+                $.ajax({
+                    url: "https://docs.google.com/forms/d/1AMstqiYLZCaILVpPmY9e_4GNxAeVnYJAZKO3x97g8XY/formResponse",
+                    data: dataToServer,
+                    type: "POST",
+                    dataType: "xml",
+                    statusCode: {
+                        0: function() {
+                            bootbox.alert('Xin nhập lại!');
+
+                        },
+                        200: function() {
+                            bootbox.alert('Chúng tôi sẽ liên lạc với bạn ngay khi có thể! Xin cảm ơn!');
+                        }
+                    }
+                })
             }
-            return false;
         });
         $('#txtEmail').keypress(function(event) {
             if (event.which == 9 || event.which == 13) {
